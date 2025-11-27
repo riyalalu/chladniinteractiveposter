@@ -21,27 +21,28 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* CHANGED: Switched to flex-start + padding to push content down */
   justify-content: flex-start; 
-  padding-top: 40px; /* Moves everything Southwards */
+  /* Reduced top padding so the canvas sits higher and can be larger */
+  padding-top: 20px; 
   box-shadow: 0 0 50px rgba(0,0,0,0.5);
   position: relative;
 }
 
 #canvas-target {
-  height: 65%; /* Slightly reduced to fit with the new padding */
+  /* INCREASED HEIGHT: Makes the canvas look bigger/zoomed-in by default */
+  height: 75%; 
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Adds specific spacing between top edge and canvas */
-  margin-top: 20px; 
+  margin-top: 10px; 
   margin-bottom: 10px;
 }
 
 canvas {
   height: 100% !important;
   width: auto !important;
-  box-shadow: 5px 5px 0px #3f332d;
+  /* REMOVED DROP SHADOW HERE */
+  box-shadow: none !important; 
   border: 4px solid #3f332d;
 }
 
@@ -54,7 +55,7 @@ canvas {
   color: #3f332d;
   gap: 15px;
   text-transform: uppercase;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .text-instructions p {
@@ -75,10 +76,10 @@ canvas {
   width: 100%;
 }
 
-/* --- WHITE BUTTONS WITH BROWN SHADOWS --- */
+/* --- BUTTONS --- */
 button {
   font-family: 'Courier Prime', monospace !important;
-  background-color: #ffffff !important; /* CHANGED: White */
+  background-color: #ffffff !important;
   border: 3px solid #3f332d !important;
   color: #3f332d !important;
   padding: 10px 25px !important;
